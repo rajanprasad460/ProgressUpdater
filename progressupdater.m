@@ -9,10 +9,16 @@ progress2 = (i/row*50);
 s_progress(1:progress)=repelem('*',progress);
 a_progress=sprintf('%.2f%%',progress2*2);
 s_progress(21:21+length(a_progress)-1)=a_progress;
-
-clc;
+%------------------------------------------------------
 str{1}=str_maj;
 str{2}=sprintf('[%s] Complete \n',s_progress);
-% fprintf('[%s] Complete \n',s_progress);
+% This part clears the displayed so that it looks similar to carriage
+% return
+if i>1
+    % Deleting the data Written using this function
+    fprintf(repmat('\b',1,length(str{1})+length(str{2})+1));
+end
+%------ Printing the result -------------------------------------
 fprintf('%s\n%s',str{1},str{2});
+
 end
