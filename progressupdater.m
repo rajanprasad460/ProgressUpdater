@@ -1,5 +1,5 @@
-function str=progressupdater(i,row,str_maj)
-% function str=progressupdater(i,row,str_maj)
+function str = progressupdater(i,row,str_maj)
+% function str = progressupdater(i,row,str_maj)
 % progressupdater reads the current loop count, total loop, and user
 % defined string to be displayed as an update to the user
 
