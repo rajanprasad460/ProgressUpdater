@@ -3,7 +3,8 @@ function str = progressupdater(i,row,str_maj)
 % progressupdater reads the current loop count, total loop, and user
 % defined string to be displayed as an update to the user
 
-s_progress=blanks(50);
+% s_progress=blanks(50);
+s_progress = repmat('-',1,50);
 progress=round(i/row*50);
 progress2 = (i/row*50);
 s_progress(1:progress)=repelem('*',progress);
